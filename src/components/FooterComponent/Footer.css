@@ -1,0 +1,109 @@
+/* Footer Wrapper */
+.footer {
+  background-color: #1a1a1a;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.footer-about h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Links Section */
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00aaff;
+}
+
+/* Contact Section */
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-contact h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom-links a {
+  margin-left: 15px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+
+.footer-bottom-links a:hover {
+  color: #00aaff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

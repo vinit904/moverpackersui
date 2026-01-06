@@ -1,0 +1,159 @@
+
+/* Main container from template */
+#tooplate_content {
+  padding: 30px;
+  background: #f5f7fb;
+}
+
+.content_box {
+  max-width: 700px;
+  margin: auto;
+}
+
+.content_box_last {
+  padding-bottom: 40px;
+}
+
+/* AI Chat Wrapper */
+.ai-chat {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: hidden;
+}
+
+/* Header */
+.ai-chat-header {
+  background: linear-gradient(135deg, #5a67d8, #667eea);
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f9fafc;
+}
+
+/* Messages */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* User message */
+.message.user {
+  margin-left: auto;
+  background: #5a67d8;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* AI message */
+.message.assistant {
+  margin-right: auto;
+  background: #e6e8f0;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+/* Typing indicator */
+.typing {
+  font-style: italic;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Chat input area */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+/* Textarea */
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-input textarea:focus {
+  border-color: #5a67d8;
+}
+
+/* Send button */
+.chat-input button {
+  background: #5a67d8;
+  color: #fff;
+  border: none;
+  padding: 0 25px;
+  height: 55px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #434190;
+}
+
+.chat-input button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Scrollbar */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ai-chat {
+    height: 85vh;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+
+  .chat-input {
+    flex-direction: column;
+  }
+
+  .chat-input button {
+    width: 100%;
+    padding: 10px;
+  }
+}

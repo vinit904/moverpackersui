@@ -1,0 +1,69 @@
+/* Container */
+#tooplate_content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+#tooplate_content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table */
+#tooplate_content table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#tooplate_content th,
+#tooplate_content td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#tooplate_content th {
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: bold;
+}
+
+#tooplate_content tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tooplate_content tr:hover {
+  background-color: #e6f2ff;
+}
+
+/* Status colors */
+#tooplate_content td font[color='green'] {
+  font-weight: bold;
+}
+
+#tooplate_content td font[color='orange'] {
+  font-weight: bold;
+}
+
+/* Action links */
+#tooplate_content td font[color='blue'],
+#tooplate_content td font[color='red'] {
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin: 4px 0;
+}
+
+#tooplate_content td font[color='blue']:hover {
+  text-decoration: underline;
+}
+
+#tooplate_content td font[color='red']:hover {
+  text-decoration: underline;
+}

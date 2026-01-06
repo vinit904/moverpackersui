@@ -1,0 +1,86 @@
+/* Make the menu transparent */
+#templatemo_menu {
+  background-color: grey;
+  /* removes background color */
+
+  top: 0;
+  /* stick to the top */
+  left: 0;
+  width: 100%;
+  /* full width */
+  height: 80px;
+  /* adjust height as needed */
+  z-index: 1;
+  /* keep it above the banner */
+  font-size: 20px;
+  display: block;
+  /* increase font size for better visibility */
+}
+
+#templatemo_menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+/* Adjust menu items color for visibility on banner */
+#templatemo_menu ul li a {
+  color: white;
+  /* change text color to white */
+  font-weight: 700;
+  /* make text bold for better visibility */
+  text-decoration: none;
+
+
+}
+
+/* Ensure dropdown menus are also visible */
+
+
+#templatemo_menu ul li a:hover {
+  background-color: transparent;
+  /* slightly lighter background on hover */
+  color: #FF6600;
+  /* white text on hover */
+}
+
+/* End of NavComponent/Nav.css modifications */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}

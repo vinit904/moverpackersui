@@ -1,0 +1,85 @@
+.banner-bg {
+  background-image: url('../../../public/assets/ComponentImages/pexels-rdne-7464479.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+  position: relative;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+}
+
+.banner-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.banner-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.banner-overlay .btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 20px;
+
+
+
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.banner-overlay .btn:hover {
+  background-color: #e65c00;
+}
+
+@media (max-width: 768px) {
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1.2rem;
+  }
+
+  .banner-overlay .btn {
+    width: 150px;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.banner-overlay .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.5);
+}
+
+.banner-overlay .btn:active {
+  background-color: #cc5200;
+}
+
+.banner-overlay .btn:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+.banner-overlay .btn:disabled:hover {
+  background-color: #999999;
+}

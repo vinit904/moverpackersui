@@ -1,0 +1,216 @@
+/* ManageConsignment.css */
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --success: #10b981;
+  --success-hover: #059669;
+  --warning: #f59e0b;
+  --warning-hover: #d97706;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.admin-orders-page {
+  padding: 2rem;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+}
+
+/* Orders Grid Layout */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Order Card Styling */
+.order-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header Section */
+.order-header {
+  padding: 1rem 1.25rem;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-id {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: #cbd5e1;
+  color: #475569;
+}
+
+.status.approved {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status.pending {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+/* Body Section */
+.order-body {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.order-body p {
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.order-body strong {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-right: 0.5rem;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.desc {
+  background-color: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+  margin-top: 1rem;
+}
+
+/* Actions Section */
+.order-actions {
+  padding: 1.25rem;
+  border-top: 1px solid var(--border);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  flex: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.success {
+  background-color: var(--success);
+  color: white;
+}
+.btn.success:hover { background-color: var(--success-hover); }
+
+.btn.warning {
+  background-color: var(--warning);
+  color: white;
+}
+.btn.warning:hover { background-color: var(--warning-hover); }
+
+.btn.danger {
+  background-color: var(--danger);
+  color: white;
+}
+.btn.danger:hover { background-color: var(--danger-hover); }
+
+/* Tracking Selection Form */
+.form-group {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-main);
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+.form-group textarea:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: var(--primary);
+}
+
+.form-group input[type='text'] {
+  display: none; /* Hidden as per common patterns where ID is handled internally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .admin-orders-page {
+    padding: 1rem;
+  }
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}
